@@ -681,10 +681,7 @@ client.on("messageCreate", async (ctx) => {
 function escapeRegex(str) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, `\\$&`);
 }
-
+app.listen(kalash.port, () => console.log('Connecting...'))
 client.login(process.env.token)
 throw new Error(`TOKEN OR INTENT INVALID`)
-})
 
-
-app.listen(kalash.port, () => console.log('Connecting...'))
